@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Créer un profil</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg,#F5F5F5,#48CFCB,#229799,#424242);
+            background-size: 400% 400%;
+            animation: gradient 8s ease infinite;
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px 40px;
+            border-radius: 20px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .profile-pic {
+            width: 100px;
+            height: 100px;
+            background-color: #98c5d4;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            background-image: url('https://via.placeholder.com/100');
+            background-size: cover;
+            background-position: center;
+            border: 3px solid #49fdee;
+        }
+
+        h2 {
+            color: #222;
+            margin-bottom: 25px;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 10px 14px;
+            margin: 10px 0;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #8eb9ed;
+            color: white;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #22c8ff;
+        }
+
+    </style>
+</head>
+<body>
+  <div class="form-container">
+    <div class="profile-pic"></div>
+    <h2>Créer votre profil</h2>
+    <form>
+        <input type="text" placeholder="Nom d'utilisateur" required>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Mot de passe" required>
+        <textarea rows="3" placeholder="Bio (parlez un peu de vous)"></textarea>
+        <select required>
+            <option disabled selected>Votre pays</option>
+            <option>France</option>
+            <option>Algérie</option>
+            <option>Tunisie</option>
+            <option>Maroc</option>
+        </select>
+        <input type="submit" value="S'inscrire">
+    </form>
+  </div>
+</body>
+</html>
